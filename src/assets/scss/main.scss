@@ -1,0 +1,35 @@
+// your variable overrides
+// modify theme colors map
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+$theme-colors: map-remove($theme-colors, "success", "info", "danger");
+$theme-colors: (
+  "primary": #42b883,
+  //...other variables, you can find them in node_modules/bootstrap/scss/_variables.scss,
+);
+
+// import to set changes
+// @import "~bootstrap/scss/bootstrap";
+
+body {
+  // background: var(primary);
+  // background-color: theme-colors("primary");
+  // background-color: theme-color("dark");
+  // color: gray("100");
+  // background-color: theme-color("dark");
+  font-size: 14px;
+}
+.content-col {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
